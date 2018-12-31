@@ -4,8 +4,7 @@ class HomeController < ApplicationController
 
   TEAM = [
     { name: "Sebastian Kim", role: "Founder, Developer", steemit: "tabris" },
-    { name: "YoungWhi Cho", role: "Founder, Designer", steemit: "project7" },
-    { name: "Astro Lee", role: "Developer", steemit: "astrocket" }
+    { name: "YoungWhi Cho", role: "Founder, Designer", steemit: "project7" }
   ]
   MODERATOR_ACCOUNTS = [
     'teamhumble', 'urbangladiator', 'dayleeo', 'fknmayhem', 'jayplayco', 'bitrocker2020', 'joannewong',
