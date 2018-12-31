@@ -17,7 +17,6 @@ class HomeController < ApplicationController
     'aamirijaz',
     'sanach',
     'calprut',
-    'steemjetrecords',
     'mrfringe',
     'acdevan',
     'karamyog',
@@ -26,11 +25,12 @@ class HomeController < ApplicationController
     'amar15',
     'abasifreke',
     'wiseeyes',
-    'fararizky',
     'pavonj',
     'xabi',
-    'bitshares101',
-    'krevasilis'
+    'krevasilis',
+    'bbomber',
+    'tornad',
+    'iqbaladan'
   ].map {|person| { name: person, role: "Influencer", steemit: person} }
 
   THUMBNAIL_EXCLUSION = [
