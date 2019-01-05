@@ -1,11 +1,19 @@
 <div class="landing-container" id="landing">
   <div class="contents-container">
     <div class="contents-box">
+      <a href="<%= I18n.locale == :en ? '/ko' : '/' %>" class="language">
+        <%= I18n.locale == :en ? '한글버전' : 'English' %>
+
+      </a>
       <%= image_tag('logo_top@2x.png', class: 'logo-top') %>
       <h1 class="logo-text">HUNT</h1>
-      <h1 class="contents-title">POWER OF PRODUCT INFLUENCERS</h1>
+      <h1 class="contents-title"><%= t('main.title') %></h1>
       <p class="contents-text">
-        <span class="primary-color"><%= number_with_delimiter @stats[:count] %></span> cool products, <span class="primary-color"><%= number_to_currency @stats[:value] %></span> hunter rewards generated over <span class="primary-color"><%= number_with_delimiter @products_days %></span> days on top of Steem Blockchain
+        <%= t('main.sub_title',
+          count: number_with_delimiter(@stats[:count]),
+          value: number_to_currency(@stats[:value]),
+          days: number_with_delimiter(@products_days),
+        ).html_safe %>
       </p>
       <button data-target="hunt-platform" class="primary-button section-link"><%= t('terms.learn_more') %></button>
     </div>
@@ -75,7 +83,7 @@
   </div>
 
   <div class="main-row section" id="steemhunt">
-    <h2 class="primary-color section-title">Steemhunt <span class="icon-text-box">LIVE</span> </h2>
+    <h2 class="primary-color section-title">Steemhunt <span class="icon-text-box">LIVE</span></h2>
     <h1 class="white-color section-subtitle"><%= t('steemhunt.sub_title') %></h1>
     <p class="grey-color"><%= t('steemhunt.content') %></p>
     <p class="grey-color">
@@ -88,7 +96,7 @@
   </div>
 
   <div class="main-row section" id="reviewhunt">
-    <h2 class="primary-color section-title">Reviewhunt</h2>
+    <h2 class="primary-color section-title">Reviewhunt <span class="icon-text-box">IN DEVLOPMENT</span></h2>
     <h1 class="white-color section-subtitle"><%= t('reviewhunt.sub_title') %></h1>
     <p class="grey-color"><%= t('reviewhunt.content') %></p>
     <%= image_tag('reviewhunt@2x.png', class: 'full-width reviewhunt mobile-hide') %>

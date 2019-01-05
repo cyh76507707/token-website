@@ -38,6 +38,8 @@ class HomeController < ApplicationController
   ]
 
   def index
+    I18n.locale = I18n.available_locales.map(&:to_s).include?(params[:locale]) ? params[:locale] : 'en'
+
     @thumbnails = Rails.cache.fetch('thumbnails', expires_in: 30.minutes) do
       Post.select(:images).order(hunt_score: :desc).limit(200).map(&:thumbnail).reject { |t| t =~ /.*\.gif$/ }
     end

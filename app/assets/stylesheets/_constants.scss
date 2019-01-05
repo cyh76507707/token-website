@@ -1,4 +1,5 @@
 @import "./mixins";
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
 
 $primary: #fc6f6f;
 $text_grey: #aaa;
@@ -9,7 +10,7 @@ $green: #52c41a;
 $red: #f5222d;
 
 html, body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Open Sans', 'Nanum Gothic', sans-serif;
   line-height: 1.5;
   font-size: 16px;
   margin: 0;
@@ -30,7 +31,7 @@ html, body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Comfortaa', cursive;
+  font-family: 'Comfortaa', 'Nanum Gothic', cursive;
   font-weight: 400;
 }
 

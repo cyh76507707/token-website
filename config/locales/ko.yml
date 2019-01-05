@@ -1,15 +1,15 @@
-en:
+ko:
   main:
     title: "POWER OF PRODUCT INFLUENCERS"
-    sub_title: <span class="primary-color">%{count}</span> cool products, <span class="primary-color">%{value}</span> hunter rewards generated over <span class="primary-color">%{days}</span> days on top of Steem Blockchain
+    sub_title: <span class="primary-color">%{days}</span> 일 동안 <span class="primary-color">%{count}</span>개의 멋진 제품들과, <span class="primary-color">%{value}</span> 달러의 리워드가 지급 되었습니다.
   terms:
     steemhunt: "Steemhunt"
     reviewhunt: "Reviewhunt"
     ideahunt: "Ideahunt"
     live_product: "LIVE PRODUCT"
-    learn_more: "LEARN MORE"
+    learn_more: "더 보기"
   platform:
-    title: "What is HUNT Platform?"
+    title: "헌트 플랫폼이 뭔가요?"
     content: "HUNT is an incentivising community platform on top of Steem Blockchain for product influencers who have exceptional knowledge and passion for cool new products. It’s a bridging platform for makers to reach out to early adopters for the successful launch of their product."
   portfolio:
     title: "HUNT Platform Portfolio"
