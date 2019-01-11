@@ -652,7 +652,13 @@ table.token-distribution {
           }
         }
       }
-    }
+      .profile-linkedin {
+        width: 16px;
+        height: 16px;
+        margin-left: 5px;
+        margin-top: 36px;
+      }
+    } // .person-container
   } // .team-container
 
   .team-delegators {

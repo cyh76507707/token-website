@@ -3,8 +3,20 @@ class HomeController < ApplicationController
   require 'net/http'
 
   TEAM = [
-    { name: "Sebastian Kim", role: "Founder, Developer", steemit: "tabris" },
-    { name: "YoungWhi Cho", role: "Founder, Designer", steemit: "project7" }
+    {
+      name: "Sebastian Kim",
+      role: "Founder, Developer",
+      steemit: "tabris",
+      thumbnail: ActionController::Base.helpers.asset_path('seb.jpg'),
+      linkedin: 'https://www.linkedin.com/in/sydneyitguy/'
+    },
+    {
+      name: "YoungWhi Cho",
+      role: "Founder, Designer",
+      steemit: "project7",
+      thumbnail: ActionController::Base.helpers.asset_path('andrew.jpg'),
+      linkedin: 'https://www.linkedin.com/in/andrewyhc/'
+    }
   ]
   MODERATOR_ACCOUNTS = [
     'teamhumble', 'urbangladiator', 'dayleeo', 'fknmayhem', 'jayplayco', 'bitrocker2020', 'joannewong',
