@@ -1,4 +1,4 @@
-<% profile_picture = person[:thumbnail] ? person[:thumbnail] : (person[:no_thumbnail] ? image_path('img_plc@2x.png') : "https://img.busy.org/@#{person[:steemit]}?s=120") %>
+<% profile_picture = person[:thumbnail] ? image_path(person[:thumbnail]) : (person[:no_thumbnail] ? image_path('img_plc@2x.png') : "https://img.busy.org/@#{person[:steemit]}?s=120") %>
 
 <div class="person-container">
   <a href="https://steemhunt.com/author/@<%= person[:steemit] %>" target="_blank">

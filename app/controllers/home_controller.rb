@@ -7,14 +7,14 @@ class HomeController < ApplicationController
       name: "Sebastian Kim",
       role: "Founder, Developer",
       steemit: "tabris",
-      thumbnail: ActionController::Base.helpers.asset_path('seb.jpg'),
+      thumbnail: 'seb.jpg',
       linkedin: 'https://www.linkedin.com/in/sydneyitguy/'
     },
     {
       name: "YoungWhi Cho",
       role: "Founder, Designer",
       steemit: "project7",
-      thumbnail: ActionController::Base.helpers.asset_path('andrew.jpg'),
+      thumbnail: 'andrew.jpg',
       linkedin: 'https://www.linkedin.com/in/andrewyhc/'
     }
   ]
