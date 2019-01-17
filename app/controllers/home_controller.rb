@@ -58,9 +58,11 @@ class HomeController < ApplicationController
     @stats = Rails.cache.fetch('stats', expires_in: 1.minute) do
       {
         count: Post.all.count,
-        value: Post.all.sum(:payout_value).round(2)
+        value: Post.all.sum(:payout_value).round(2),
+        max_reward: Post.order(payout_value: :desc).first.payout_value,
       }
     end
+
     @products_days = (Time.now.to_i - 1518784559) / 86400
     @team = TEAM
     @moderators = MODERATOR_ACCOUNTS

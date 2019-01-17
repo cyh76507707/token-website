@@ -541,6 +541,29 @@ table.token-distribution {
   }
 }
 
+.col-3 {
+  overflow: hidden;
+  margin-bottom: 2rem;
+
+  .col {
+    width: 33%;
+    max-width: 300px;
+    display: block;
+    float: left;
+
+    h1 {
+      color: #fff;
+      margin-top: 0;
+      margin-bottom: 0.1em;
+      font-weight: bold;
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+}
+
 .checkout-airdrop {
   margin-top: 1.5rem;
   margin-bottom: 4rem;

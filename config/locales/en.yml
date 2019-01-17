@@ -9,18 +9,20 @@ en:
     live_product: "LIVE PRODUCT"
     learn_more: "LEARN MORE"
   platform:
-    title: "What is HUNT Platform?"
-    content: "HUNT is an incentivising community platform on top of Steem Blockchain for product influencers who have exceptional knowledge and passion for cool new products. It’s a bridging platform for makers to reach out to early adopters for the successful launch of their product."
+    title: "Bridging Makers to Geeks"
+    content: "HUNT is home to geeks who have exceptional knowledge and passion for cool new products. Our blockchain-powered token economy and apps are bridging makers to geeks for their successful product launch."
   portfolio:
-    title: "HUNT Platform Portfolio"
-    content: "The goal of HUNT platform is to create a decentralised ecosystem by providing three blockchain-based HUNT token fueled platforms on top of Smart Media Token system."
-    steemhunt_is: " - a community where hunters introduce cool new products"
-    reviewhunt_is: " - a marketing channel where makers suggest bounty missions for hunters"
-    ideahunt_is: " - a Kickstarter-like platform where makers run crowdfunding campaigns"
+    title: "DApps to Boost<br/>Launching Hypes by Geeks"
+    content: "The goal of HUNT platform is to create a decentralised ecosystem by providing dapps and 3rd-party services that enable product makers to utilise the power of geeks."
+    steemhunt_is: " - a ranking community for geeks to discover cool new products"
+    reviewhunt_is: " - a marketing channel where makers suggest bounty missions for geeks"
+    ideahunt_is: " - a crowdfunding platform where geeks can trade their backer’s non-fungible tokens."
   steemhunt:
     sub_title: "Daily Ranking for Effortlessly Cool Products That Rewards Hunters"
     content: "Steemhunt is a community for geeks, alpha nerds, and product enthusiasts who love to dig out new products and talk about them with others. We call them “Product Hunters.” To keep them motivated and maintain the community as an ad-free playground, we adopted Steem blockchain to reward them with cryptocurrency for their dedicated activities."
-    content_2: "Hunted products & USD rewards (approx.) paid since March 2018:"
+    column_1: "Number of products shared since Mar 2018"
+    column_2: "The highest amount earned for a single hunt post"
+    column_3: "The average reward for each hunt post"
   reviewhunt:
     sub_title: "Review Campaign for Product Influencers to Unleash Launching Hype"
     content: "Makers/companies spend an enormous amount of time/efforts to raise attention from early adopters because their word of mouth impact is exceptionally high. With Reviewhunt, it’s never been easier for makers to attract early-adopters by offering newly launched products with large discounts or bounties in return for quality reviews that will boost up their launching buzz."
