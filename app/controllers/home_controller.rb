@@ -63,6 +63,20 @@ class HomeController < ApplicationController
       }
     end
 
+    @distribution = Rails.cache.fetch('distribution', expires_in: 1.minute) do
+      sum = HuntTransaction.group(:bounty_type).sum(:amount)
+      base = 500000000.0 + sum['revoke']
+      dist = {
+        delegation: 100.0 * sum['sponsor'] / base,
+        airdrop: 100.0 * sum['sp_claim'] / base,
+        role_promotion: 100.0 * (sum['contribution'] + sum['guardian'] + sum['moderator'] + sum['social_share']) / base,
+        participation: 100.0 * (sum['boost'] + sum['browser_extension'] + sum['voting'] + sum['comment_voting'] + sum['daily_shuffle'] + sum['report'] + sum['resteem']) / base,
+      }
+      dist[:left] = 50 - dist.values.sum
+
+      dist
+    end
+
     @products_days = (Time.now.to_i - 1518784559) / 86400
     @team = TEAM
     @moderators = MODERATOR_ACCOUNTS

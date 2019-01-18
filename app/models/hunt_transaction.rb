@@ -1,0 +1,2 @@
+class HuntTransaction < ApplicationRecord
+end

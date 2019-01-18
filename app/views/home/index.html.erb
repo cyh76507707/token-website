@@ -53,16 +53,16 @@
       <h1 class="primary-color"><%= t('platform.title') %></h1>
       <p class="grey-color"><%= t('platform.content') %></p>
     </div>
-    <div class="main-col-image">
+    <div class="main-col-image image-1">
       <%= image_tag 'img_building_token@2x.png' %>
     </div>
   </div>
 
   <div class="main-row flex-row section reverse" id="portfolio">
-    <div class="main-col-image">
+    <div class="main-col-image image-2">
       <%= image_tag 'img-hunt-economy@2x.png' %>
     </div>
-    <div class="main-col-text">
+    <div class="main-col-text right">
       <h1 class="primary-color"><%= t('portfolio.title').html_safe %></h1>
       <p class="grey-color"><%= t('portfolio.content') %></p>
       <div class="hunt-bar">
@@ -115,29 +115,31 @@
     <h2 class="primary-color section-title">Ideahunt</h2>
     <h1 class="white-color section-subtitle"><%= t('ideahunt.sub_title') %></h1>
     <p class="grey-color"><%= t('ideahunt.content') %></p>
+    <p class="grey-color"><%= t('ideahunt.content_2') %></p>
     <%= image_tag('ideahunt@2x.png', class: 'full-width ideahunt mobile-hide') %>
     <%= image_tag('m_ideahunt@2x.png', class: 'full-width ideahunt mobile-only') %>
   </div>
 
   <div class="main-row section" id="token-economy">
-    <h2 class="primary-color section-title">Token Economy</h2>
+    <h2 class="primary-color section-title"><%= t('token_economy.title') %></h2>
     <h1 class="white-color section-subtitle"><%= t('token_economy.sub_title') %></h1>
-    <ul class="token-economy">
-      <li class="grey-color">
-        <%= image_tag 'icon_num_1@2x.png' %>
-        <%= t('token_economy.content') %>
-      </li>
-      <li class="grey-color">
-        <%= image_tag 'icon_num_2@2x.png' %>
-        <%= t('token_economy.content_2') %>
-      </li>
-      <li class="grey-color">
-        <%= image_tag 'icon_num_3@2x.png' %>
-        <%= t('token_economy.content_3') %>
-      </li>
-    </ul>
-    <%= image_tag('img_hunt_flow@2x.png', class: 'full-width mobile-hide') %>
-    <%= image_tag('m_img_hunt_flow@2x.png', class: 'full-width mobile-only') %>
+    <div class="col-3 token-economy">
+      <div class="col">
+        <h3>Use Case 1</h3>
+        <%= image_tag 'usecase_1@2x.png' %>
+        <p><%= t('token_economy.content') %></p>
+      </div>
+      <div class="col">
+        <h3>Use Case 2</h3>
+        <%= image_tag 'usecase_2@2x.png' %>
+        <p><%= t('token_economy.content_2') %></p>
+      </div>
+      <div class="col">
+        <h3>Use Case 3</h3>
+        <%= image_tag 'usecase_3@2x.png' %>
+        <p><%= t('token_economy.content_3') %></p>
+      </div>
+    </div>
   </div>
 
   <div class="main-row section" id="token-distribution">
@@ -147,13 +149,44 @@
 
     <table class="token-distribution">
       <tr>
-        <td class="airdrops">Airdrop / Bounty / Contributors (250M)</td>
-        <td class="private-sales">Funding (100M)</td>
-        <td class="company-holding">Company Holding (150M)</td>
+        <td><%= t('token_distribution.row_1') %></td>
+        <td class="right"><%= '50%' %></td>
+      </tr>
+      <tr>
+        <td class="grey"><%= t('token_distribution.row_1_1') %></td>
+        <td class="right grey"><%= number_to_percentage(@distribution[:delegation], precision: 2) %></td>
+      </tr>
+      <tr>
+        <td class="grey"><%= t('token_distribution.row_1_2') %></td>
+        <td class="right grey"><%= number_to_percentage(@distribution[:airdrop], precision: 2) %></td>
+      </tr>
+      <tr>
+        <td class="grey"><%= t('token_distribution.row_1_3') %></td>
+        <td class="right grey"><%= number_to_percentage(@distribution[:role_promotion], precision: 2) %></td>
+      </tr>
+      <tr>
+        <td class="grey"><%= t('token_distribution.row_1_4') %></td>
+        <td class="right grey"><%= number_to_percentage(@distribution[:participation], precision: 2) %></td>
+      </tr>
+      <tr>
+        <td class="grey"><%= t('token_distribution.row_1_5') %></td>
+        <td class="right grey"><%= number_to_percentage(@distribution[:left], precision: 2) %></td>
+      </tr>
+      <tr>
+        <td><%= t('token_distribution.row_2') %></td>
+        <td class="right"><%= '30%' %></td>
+      </tr>
+      <tr>
+        <td><%= t('token_distribution.row_3') %></td>
+        <td class="right"><%= '10%' %></td>
+      </tr>
+      <tr>
+        <td><%= t('token_distribution.row_4') %></td>
+        <td class="right"><%= '10%' %></td>
       </tr>
     </table>
     <div class="checkout-airdrop">
-      <a href="https://steemhunt.com/airdrop" target="_blank" class="more-link">Check out the details of HUNT token airdrops <%= image_tag('icon-arrow-right.svg', class: 'svg-icon-p') %></a>
+      <a href="https://steemhunt.com/airdrop" target="_blank" class="more-link"><%= t('token_distribution.detail') %> <%= image_tag('icon-arrow-right.svg', class: 'svg-icon-p') %></a>
     </div>
   </div>
 
@@ -168,52 +201,42 @@
       <tr>
         <th>Q2-2018</th>
         <td class="center"><span class="bar"></span><span class="circle done"></span><span class="bar"></td>
-        <td>Initiate HUNT token airdrops</td>
+        <td>Initiate HUNT token ecosystem bounties</td>
       </tr>
       <tr>
         <th>Q3-2018</th>
         <td class="center"><span class="bar"></span><span class="circle done"></span><span class="bar"></td>
-        <td>Launch Direct Sign-up Interface</td>
+        <td>Launch blockchain account creation directly via Steemhunt.com</td>
       </tr>
       <tr>
         <th>Q4-2018</th>
         <td class="center"><span class="bar"></span><span class="circle done"></span><span class="bar"></td>
-        <td>Initiate token listing strategy & launch wallet interface</td>
+        <td>Initiate Steem Witness node to expand community influence</td>
       </tr>
       <tr>
         <th>Q1-2019</th>
         <td class="center"><span class="bar"></span><span class="circle blink"></span><span class="bar"></td>
-        <td>Issue HUNT ERC20 tokens</td>
+        <td>Create HUNT token wallet and initiate token listing strategy</td>
       </tr>
       <tr>
-        <th>Q1-2019</th>
+        <th>Q2-2019</th>
         <td class="center"><span class="bar"></span><span class="circle blink"></span><span class="bar"></td>
-        <td>Token sale and listing on exchanges</td>
+        <td>Issue HUNT ERC20 tokens and list on exchange markets</td>
       </tr>
       <tr>
         <th>Q2-2019</th>
         <td class="center"><span class="bar"></span><span class="circle"></span><span class="bar"></td>
-        <td>Launch Reviewhunt (beta)</td>
+        <td>Launch Reviewhunt beta version</td>
       </tr>
       <tr>
         <th>Q3-2019</th>
         <td class="center"><span class="bar"></span><span class="circle"></span><span class="bar"></td>
-        <td>Launch HUNT payment solution</td>
+        <td>Launch HUNT token payment and exchange solution</td>
       </tr>
       <tr>
         <th>Q4-2019</th>
-        <td class="center"><span class="bar"></span><span class="circle"></span><span class="bar"></td>
-        <td>Finalize bounty programs and initiate reward pool on SMT</td>
-      </tr>
-      <tr>
-        <th>Q1-2020</th>
         <td class="center"><span class="bar"></span><span class="circle"></span><span class="bar transparent"></td>
-        <td>Launch HUNT platform (regular ver)</td>
-      </tr>
-      <tr>
-        <th>Q2-2020</th>
-        <td class="center"><span class="bar"></span><span class="circle"></span><span class="bar transparent"></td>
-        <td>Launch Ideahunt marketplace</td>
+        <td>Launch Ideahunt alpha version with NFT feature support</td>
       </tr>
     </table>
     </table>
@@ -221,8 +244,10 @@
 
   <div class="main-row section" id="whitepaper">
     <h2 class="primary-color section-title">Whitepaper</h2>
-    <h1 class="white-color section-subtitle"><%= t('whitepaper.sub_title') %></h1>
+    <h1 class="white-color section-subtitle"><%= t('whitepaper.sub_title').html_safe %></h1>
     <p class="grey-color"><%= t('whitepaper.content') %></p>
+
+    <a href="#whitepaper"class="more-link">Read HUNT Pitch Deck (will be released public soon) <%= image_tag('icon-arrow-right.svg', class: 'svg-icon-p') %></a>
     <a href="https://steem.io/steem-whitepaper.pdf" target="_blank" class="more-link">Read Steem Whitepaper <%= image_tag('icon-arrow-right.svg', class: 'svg-icon-p') %></a>
   </div>
 
