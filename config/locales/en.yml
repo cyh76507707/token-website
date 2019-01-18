@@ -1,6 +1,6 @@
 en:
   main:
-    title: "POWER OF PRODUCT INFLUENCERS"
+    title: "POWER OF YOUR GEEKY PASSION"
     sub_title: <span class="primary-color">%{count}</span> cool products, <span class="primary-color">%{value}</span> hunter rewards generated over <span class="primary-color">%{days}</span> days on top of Steem Blockchain
   terms:
     steemhunt: "Steemhunt"

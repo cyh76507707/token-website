@@ -1,6 +1,6 @@
 ko:
   main:
-    title: "POWER OF PRODUCT INFLUENCERS"
+    title: "POWER OF YOUR GEEKY PASSION"
     sub_title: <span class="primary-color">%{days}</span> 일 동안 <span class="primary-color">%{count}</span>개의 멋진 제품들과, <span class="primary-color">%{value}</span> 달러의 리워드가 지급 되었습니다.
   terms:
     steemhunt: "Steemhunt"
