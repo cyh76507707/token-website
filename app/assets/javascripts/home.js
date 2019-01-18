@@ -67,7 +67,7 @@
       const scrollPosition = Math.max(window.pageYOffset, document.documentElement.scrollTop, document.body.scrollTop);
 
       for (i in window.sections) {
-        if ((scrollPosition !== 0) && (window.sections[i] <= scrollPosition)) {
+        if ((scrollPosition !== 0) && (window.sections[i] <= scrollPosition + 200)) {
           $menuItems.find('li .active').removeClass('active');
           $menuItems.find('li a[data-target*=' + i + ']').addClass('active');
         } else if (scrollPosition === 0) {
