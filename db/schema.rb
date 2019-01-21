@@ -15,16 +15,6 @@ ActiveRecord::Schema.define(version: 2018_12_07_122941) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "comments", force: :cascade do |t|
-    t.bigint "key", null: false
-    t.string "author", null: false
-    t.string "permlink", null: false
-    t.json "dislikers", default: {}
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["key"], name: "index_comments_on_key", unique: true
-  end
-
   create_table "erc_transactions", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.decimal "amount", null: false
@@ -46,23 +36,6 @@ ActiveRecord::Schema.define(version: 2018_12_07_122941) do
     t.index ["bounty_type"], name: "index_hunt_transactions_on_bounty_type"
     t.index ["receiver"], name: "index_hunt_transactions_on_receiver"
     t.index ["sender"], name: "index_hunt_transactions_on_sender"
-  end
-
-  create_table "phone_numbers", force: :cascade do |t|
-    t.bigint "user_id"
-    t.string "number"
-    t.integer "pin", default: -1
-    t.boolean "is_verified", default: false
-    t.integer "verification_counter", default: 0
-    t.string "last_ip"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "country_code", limit: 5
-    t.string "ip_asn"
-    t.string "ip_country"
-    t.index ["last_ip"], name: "index_phone_numbers_on_last_ip"
-    t.index ["number"], name: "index_phone_numbers_on_number"
-    t.index ["user_id"], name: "index_phone_numbers_on_user_id"
   end
 
   create_table "posts", force: :cascade do |t|
@@ -95,18 +68,6 @@ ActiveRecord::Schema.define(version: 2018_12_07_122941) do
     t.index ["listed_at"], name: "index_posts_on_listed_at"
     t.index ["url"], name: "index_posts_on_url", unique: true
     t.index ["valid_votes"], name: "index_posts_on_valid_votes", using: :gin
-  end
-
-  create_table "referrals", force: :cascade do |t|
-    t.bigint "user_id", null: false
-    t.string "remote_ip", null: false
-    t.string "path"
-    t.string "referrer"
-    t.string "user_agent"
-    t.decimal "bounty_given", default: "-1.0"
-    t.datetime "created_at"
-    t.index ["bounty_given"], name: "index_referrals_on_bounty_given"
-    t.index ["user_id", "remote_ip"], name: "index_referrals_on_user_id_and_remote_ip", unique: true
   end
 
   create_table "users", force: :cascade do |t|
