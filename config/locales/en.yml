@@ -1,6 +1,6 @@
 en:
   main:
-    title: "POWER OF YOUR GEEKY PASSION"
+    title: "POWER OF PRODUCT EARLY-ADOPTERS"
     sub_title: <span class="primary-color">%{count}</span> cool products, <span class="primary-color">%{value}</span> hunter rewards generated over <span class="primary-color">%{days}</span> days on top of Steem Blockchain
   terms:
     steemhunt: "Steemhunt"
@@ -9,14 +9,14 @@ en:
     live_product: "LIVE PRODUCT"
     learn_more: "LEARN MORE"
   platform:
-    title: "Bridging Makers to Geeks"
-    content: "HUNT is home to geeks who have exceptional knowledge and passion for cool new products. Our blockchain-powered token economy and apps are bridging makers to geeks for their successful product launch."
+    title: "Bridging Makers to Early-adopters"
+    content: "HUNT is home to product early-adopters who have exceptional knowledge and passion for cool new products. Our blockchain-powered token economy and apps are bridging makers to early-adopters for their successful product launch."
   portfolio:
-    title: "DApps to Boost<br/>Launching Hypes by Geeks"
-    content: "The goal of HUNT platform is to create a decentralised ecosystem by providing dapps and 3rd-party services that enable product makers to utilise the power of geeks."
-    steemhunt_is: " - a ranking community for geeks to discover cool new products"
-    reviewhunt_is: " - a marketing channel where makers suggest bounty missions for geeks"
-    ideahunt_is: " - a crowdfunding platform where geeks can trade their backer’s non-fungible tokens."
+    title: "DApps to Boost Launching Hypes by Product Enthusiasts"
+    content: "The goal of HUNT platform is to create a decentralised ecosystem by providing dapps and 3rd-party services that enable product makers to utilise the power of product lovers."
+    steemhunt_is: " - a ranking community for product enthusiasts to discover cool new products"
+    reviewhunt_is: " - a marketing channel where makers suggest bounty missions for early-adopters"
+    ideahunt_is: " - a crowdfunding platform where early-adopters can trade their backer’s non-fungible tokens"
   steemhunt:
     sub_title: "Daily Ranking for Effortlessly Cool Products That Rewards Hunters"
     content: "Steemhunt is a community for geeks, alpha nerds, and product enthusiasts who love to dig out new products and talk about them with others. We call them “Product Hunters.” To keep them motivated and maintain the community as an ad-free playground, we adopted Steem blockchain to reward them with cryptocurrency for their dedicated activities."
@@ -32,7 +32,7 @@ en:
     content_2: "Ideahunt will utilise NFT (Non-fungible token) and potentially security token transactions for the crowdfunding/ backing activities, so that the backer’s actions will be linked with the pre- market valuation of the crowdfunding products."
   token_economy:
     title: "HUNT Token Economy"
-    sub_title: "Tokens that Create an Interchangeable Ecosystem between Makers and Geeks"
+    sub_title: "Tokens that Create an Interchangeable Ecosystem between Makers and Hunters"
     content: "Hunters earn HUNT tokens by sharing/upvoting cool new products in the Steemhunt community."
     content_2: "Makers buy HUNT tokens to run review campaigns for hunters. Hunters can also use HUNT tokens to purchase products with a discounted price."
     content_3: "Hunters use HUNT tokens to back crowdfunding projects, trade NFT (non-fungible tokens) and purchase products pre-launch."
